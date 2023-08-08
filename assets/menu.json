@@ -1,0 +1,25 @@
+[
+  {
+    "label": "Long, Long Space Travel",
+    "background": "#9acd32",
+    "color": "#2f4f4f",
+    "items":
+    [
+      {
+        "start": 700000,
+        "end": 110000000,
+        "label": "to Sirius"
+      },
+      {
+        "start": 723000,
+        "end": 740000,
+        "label": "in Solar System"
+      },
+      {
+        "start": 723000,
+        "end": 725000,
+        "label": "to Jupiter"
+      }
+    ]
+  }
+]
