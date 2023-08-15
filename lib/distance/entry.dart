@@ -125,6 +125,6 @@ class DistanceEntry {
     } else {
       label = valueAbs.toStringAsFixed(0);
     }
-    return "$label decimetres";
+    return "$label days";
   }
 }

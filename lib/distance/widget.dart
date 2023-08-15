@@ -264,15 +264,12 @@ class DistanceWidgetState extends State<DistanceWidget> {
                                 //return true;
                               },
                             ),
-/*                            Text(
-                              _positionName!,
+                            const Text(
+                              "VoyagerII",
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                  fontSize: 20.0,
-                                  color: _headerTextColor ?? darkText.withOpacity(
-                                      darkText.opacity * 0.75)
+                                  fontSize: 20.0),
                               ),
-                            ),*/
                           ]))
                 ])
           ])),

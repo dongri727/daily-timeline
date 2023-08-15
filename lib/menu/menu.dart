@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import '../bloc_provider.dart';
 import '../distance/widget.dart';
+import '../ttf_format.dart';
 import 'menu_data.dart';
 import 'menu_section.dart';
 
@@ -48,6 +49,8 @@ class MainMenuWidgetState extends State<MainMenuWidget> {
   @override
   Widget build(BuildContext context) {
     EdgeInsets devicePadding = MediaQuery.of(context).padding;
+    final controller = TextEditingController();
+    final timeline = BlocProvider.getDistance(context);
 
     List<Widget> tail = [];
 
@@ -71,12 +74,58 @@ class MainMenuWidgetState extends State<MainMenuWidget> {
       ),
       body: Padding(
         padding: EdgeInsets.only(top: devicePadding.top),
-        child: SingleChildScrollView(
-            padding:
-            const EdgeInsets.only(top: 20.0, left: 20, right: 20, bottom: 20),
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[] + tail)),
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Row(
+                children: [
+                  Expanded(
+                    flex: 5,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(20,20,5,20),
+                      child: FormatGrey(
+                        controller: controller,
+                        hintText: "Search Term",
+                        onChanged: (text) {
+                        },
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(5,20,20,20),
+                      child: ElevatedButton(
+                        onPressed: () {
+
+                          ///todo 検索は書き直す必要がある
+/*                          timeline.loadFromBundle('events', country: controller.text.isNotEmpty
+                              ? controller.text
+                              : null);
+
+                          showDialog(
+                              barrierDismissible: false,
+                              context: context,
+                              builder: (BuildContext context){
+                                return AlertDialog(
+                                  title: const Text('Successfully Selected'),
+                                  content: const Text('Please Choose an Era and Move On'),
+                                  actions: [
+                                    TextButton(
+                                        onPressed: () => Navigator.pop(context),
+                                        child: const Text('OK')),
+                                  ],
+                                );
+                              });
+                          controller.clear();*/
+                        },
+                        child: const Text("submit"),
+                      ),),
+                  )
+                ],
+              ),
+            ] + tail),
+
       ),
     );
   }
