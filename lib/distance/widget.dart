@@ -4,7 +4,7 @@ import 'distance.dart';
 import 'entry.dart';
 import 'utils.dart';
 import 'render_widget.dart';
-import '../color.dart';
+//import '../color.dart';
 
 typedef ShowMenuCallback = Function();
 typedef SelectItemCallback = Function(DistanceEntry item);

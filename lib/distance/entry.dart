@@ -1,5 +1,4 @@
 import 'dart:ui' as ui;
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -104,7 +103,7 @@ class DistanceEntry {
 
   /// Helper method.
   /// object間の距離を算出
-  ///メモリ表示と等しい10cm単位
+  ///１日単位
   static String formatDistance(double start) {
     String label;
     int valueAbs = start.round().abs();
